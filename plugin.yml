@@ -1,0 +1,29 @@
+name: MineReporter
+main: com.github.Shiul93.MineReporter
+version: 0.1
+
+commands:
+   report:
+      description: Reports a user with a reason message
+      usage: /mr report [player] [report reason]
+      permission: <plugin name>.basic
+      permission-message: You don't have <permission>
+      
+   showReported:
+   	  description: Shows the reported players names
+      usage: /mr showpl
+      permission: <plugin name>.basic
+      permission-message: You don't have <permission>
+      
+   showReport:
+      description: Shows the report message associated to a reported player
+      usage: /mr show [player]
+      permission: <plugin name>.basic
+      permission-message: You don't have <permission> 
+       
+   deleteReport:
+      description:Removes a report from the list
+      usage: /mr del [player]
+      permission: <plugin name>.basic
+      permission-message: You don't have <permission>
+    
