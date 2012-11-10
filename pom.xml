@@ -47,13 +47,7 @@
             <artifactId>craftbukkit</artifactId>
             <version>[1.4.2-R0.1,)</version>
         </dependency>
-		<dependency>
-		    <groupId>com.massivecraft.factions</groupId>
-		    <artifactId>Factions</artifactId>
-			<version>1.5</version>
-		    <scope>system</scope>
-		    <systemPath>${project.basedir}/lib/Factions.jar</systemPath>
-		</dependency>
+		
 		
     </dependencies>
 </project>
