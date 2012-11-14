@@ -4,6 +4,8 @@ version: 0.1
 
 commands:
   report:
+    description: Report something
+    usage: /report [user] [reason] [description...]
+  reports:
     description: Manage reports
-    usage: /report [report|list|delete] [arguments...]
 
