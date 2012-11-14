@@ -1,7 +1,5 @@
 package com.github.Shiul93.MineReporter;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.*;
 public final class MineReporter extends JavaPlugin {
@@ -10,6 +8,9 @@ public final class MineReporter extends JavaPlugin {
     public void onEnable(){
 		List<Report> reportList = new ArrayList<Report>();
 		getLogger().info("MineReporter enabled");
+		
+		// "report" was registered in plugin.yml. now delete this comment.
+		getCommand("report").setExecutor(new ReportCommandHandler());
     }
 	
  
@@ -17,48 +18,4 @@ public final class MineReporter extends JavaPlugin {
     public void onDisable() {
     	getLogger().info("MineReporter disabled");
     }
-    
-    
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
-    	if(cmd.getName().equalsIgnoreCase("mr")){ 
-    		switch (label){
-    			
-    			case "report":
-    				
-    				
-    				
-    				break;
-    			case "showpl":
-    				
-    				
-    				
-    				break;	
-    			case "show":
-    				
-    				
-    				
-    				break;
-    			case "del":
-    				
-    				
-    				
-    				break;    				
-    		
-    		}
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		return true;
-    	} //If this has happened the function will return true. 
-            // If this hasn't happened the a value of false will be returned.
-    	return false; 
-    }
-    
-    
-
-    
 }
