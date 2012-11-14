@@ -1,8 +1,7 @@
 package com.github.Shiul93.MineReporter;
 
-import org.bukkit.plugin.java.JavaPlugin;
 
-final class Report extends JavaPlugin{
+public class Report {
 	
 	private String reporter = "";
 	private String reportedUsr = "";
