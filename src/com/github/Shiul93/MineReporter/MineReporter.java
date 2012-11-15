@@ -1,64 +1,48 @@
 package com.github.Shiul93.MineReporter;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.github.Shiul93.MineReporter.Command.ReportCommandHandler;
+import com.github.Shiul93.MineReporter.Command.ReportsCommandHandler;
+
 import java.util.*;
 public final class MineReporter extends JavaPlugin {
 	
+	private ArrayList<Report> list;
+
+
 	@Override
-    public void onEnable(){
-		List<Report> reportList = new ArrayList<Report>();
+    public void onEnable() {
+		
+		list = loadReports();
 		getLogger().info("MineReporter enabled");
+		
+		getCommand("report").setExecutor(new ReportCommandHandler());
+		getCommand("reports").setExecutor(new ReportsCommandHandler());
     }
 	
  
-    @Override
+	@Override
     public void onDisable() {
+		saveReports(list);
     	getLogger().info("MineReporter disabled");
     }
-    
-    
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
-    	if(cmd.getName().equalsIgnoreCase("mr")){ 
-    		switch (label){
-    			
-    			case "report":
-    				
-    				
-    				
-    				break;
-    			case "showpl":
-    				
-    				
-    				
-    				break;	
-    			case "show":
-    				
-    				
-    				
-    				break;
-    			case "del":
-    				
-    				
-    				
-    				break;    				
-    		
-    		}
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		return true;
-    	} //If this has happened the function will return true. 
-            // If this hasn't happened the a value of false will be returned.
-    	return false; 
-    }
-    
-    
 
+	/**
+	 * Read reports from filesystem
+	 * @return
+	 */
+    private ArrayList<Report> loadReports() {
+		// TODO Auto-generated method stub
+		return null;
+	}
     
+    /**
+     * Save reports to filesystem
+     * @param list2
+     */
+	private void saveReports(ArrayList<Report> list2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
